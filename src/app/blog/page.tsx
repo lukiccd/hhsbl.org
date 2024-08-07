@@ -1,7 +1,15 @@
+import BlogContent from "@/components/BlogContent"
+import HeroSecondary from "@/components/heroSecondary"
+import NavBar from "@/components/navBar"
 
 const BlogList = () => {
     return (
-        <h2>asdasds</h2>
+        <>
+            {/* <NavBar /> */}
+            <HeroSecondary/>
+            <BlogContent/>
+            
+        </>
     )
 }
 

@@ -15,7 +15,7 @@ const Hero = () => {
 
          <article className='xl:ps-20 mt-56 relative z-10'>
             <h1 className="text-white text-5xl md:text-6xl lg:text-7xl xl:text-6xl font-bold mb-4 gradient-text">
-               <span className="">Храм Христа 2</span> <br></br>Спаситеља
+               <span className="">Храм Христа</span> <br></br>Спаситеља
             </h1>
             <h2 className="text-white text-4xl md:text-4xl lg:text-5xl xl:text-6xl font-light mb-11">
                Бања Лука

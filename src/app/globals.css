@@ -64,12 +64,23 @@ body {
 }
 
 .hero-pattern-mobile {
-  background-image: url('/hram-hrista-spasitelja-mobile.jpg'); 
+  background-image: url('../../public/hram-hrista-spasitelja-mobile.jpg'); 
 }
 .hero-pattern-desktop {
-  background: url('/slika-hrama.webp'),linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0));
+  background: url('../../public/slika-hrama.webp'),linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0));
   background-position: center;
   background-size:cover;
   background-repeat: no-repeat;
   /* object-fit: cover; */
+}
+
+.proskomidijaTitle {
+
+background: linear-gradient(114.5deg, #FFFFFF -26.07%, #FFCE50 99%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+text-fill-color: transparent;
+
+
 }

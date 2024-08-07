@@ -14,7 +14,9 @@ const config: Config = {
         "hero-pattern": "url('/hram-hrista-spasitelja.webp')", 
         "svestenstvo-bg": "url('../../public/svestenstvoPozadina.png')",
         "birdLeft": "url('../../public/birdLeft.svg')",
-        "birdRight": "url('../../public/birdRight.svg')"
+        "birdRight": "url('../../public/birdRight.svg')",
+        "hero-backround-blog": "url('../../public/blog-post.webp')",
+        "proskomidijaBackground": "url('../../public/proskomidijaBackround.webp')",
       },
       colors: {
         yellowColor: '#FFCE50',
