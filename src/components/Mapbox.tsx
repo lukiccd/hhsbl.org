@@ -9,15 +9,26 @@ const Mapbox = () => {
     const map = useRef(null);
     const [lng, setLng] = useState(17.191653554857513);
     const [lat, setLat] = useState(44.77246936914284);
-    const [zoom, setZoom] = useState(9);
+    const [zoom, setZoom] = useState(15);
     useEffect(() => {
         if (map.current) return; // initialize map only once
         map.current = new mapboxgl.Map({
             container: mapContainer.current,
             style: 'mapbox://styles/dsauhdu/cltr3m1z000le01pcb0me9o7i/draft',
             center: [lng, lat],
-            zoom: zoom
-        });
+            zoom: zoom,
+            pitch: 69,
+            attributionControl: false,
+            logoPosition: 'bottom-right'
+        }).addControl(new mapboxgl.AttributionControl({
+            compact: true,
+            // customAttribution: ''
+        }));
+        new mapboxgl.Marker({
+            color: '#ffce50'
+        })
+            .setLngLat([lng, lat])
+            .addTo(map.current)
     });
     return (
         <div>
