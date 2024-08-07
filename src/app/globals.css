@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  color: white;
+}
+
+.gradient-text {
+  background: linear-gradient(to left, #FFCE50, #FFFFFF);
+  background-size: 50% 80%;
+  background-position: 0 0;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.gradient-bg {
+  background: linear-gradient(to right, #FFCE50, #D4922E);
+}
+
+.blogposts-bg {
+  background: url('../../public/pozadina-blog-posts.webp');
+  background-size: cover;
+  background-position: center;
+}
+
+.gradient-line {
+  width: 200px;
+  height: 2px;
+  /* Adjust height as needed */
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 206, 80, 1) 50%, rgba(255, 255, 255, 0) 100%);
+}
+
+.gradient-title {
+  font-weight: bold;
+  background: linear-gradient(165deg, #FFFFFF 7%, #FFCE50 56%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+.gradient-title-reverse{
+  font-weight: bold;
+  background: linear-gradient(90deg, #C9B37B 0%, #FFCE50 50%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+/* styles.css */
+.gradient-border {
+  position: relative;
+  display: inline-block;
+  border-radius: 25px; /* Adjust as needed */
+  padding: 2px; /* Space for the border */
+  background: linear-gradient(90deg, #F9E0A1 0%, #FBC435 50%, #C68E00 100%);
+}
+
+.gradient-border img {
+  display: block;
+  border-radius: 15px; /* Match the outer radius */
+}
+
+.hero-pattern-mobile {
+  background-image: url('/hram-hrista-spasitelja-mobile.jpg'); 
+}
+.hero-pattern-desktop {
+  background: url('/slika-hrama.webp'),linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0));
+  background-position: center;
+  background-size:cover;
+  background-repeat: no-repeat;
+  /* object-fit: cover; */
+}
