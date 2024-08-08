@@ -13,11 +13,11 @@ const Hero = () => {
 
          <NavBar />
 
-         <article className='xl:ps-20 mt-56 relative z-10'>
-            <h1 className="text-white text-5xl md:text-6xl lg:text-7xl xl:text-6xl font-bold mb-4 gradient-text">
+         <article className='xl:ps-20 mt-24 md:mt-56 relative z-10'>
+            <h1 className="text-white text-5xl md:text-6xl lg:text-7xl xl:text-6xl font-bold mb-2 md:mb-4 gradient-text">
                <span className="">Храм Христа</span> <br></br>Спаситеља
             </h1>
-            <h2 className="text-white text-4xl md:text-4xl lg:text-5xl xl:text-6xl font-light mb-11">
+            <h2 className="text-white font-semibold text-4xl md:text-4xl lg:text-5xl xl:text-6xl  mb-5 md:mb-11 drop-shadow-4xl">
                Бања Лука
             </h2>
             <div className="flex space-x-4 ">
@@ -31,11 +31,11 @@ const Hero = () => {
          </article>
 
          <article className='flex flex-col text-left mt-10 xl:hidden relative z-10'>
-            <span className='text-xs flex flex-col'>
+            <span className='text-xs flex flex-col '>
                Данас је 22. април 2024. године
-               <span className='font-bold text-xl'>Свети мученик Евпсихиje</span>
+               <span className='font-bold text-2xl drop-shadow-4xl'>Свети мученик Евпсихиje</span>
             </span>
-            <span className='text-yellowColor text-xs mt-3'>Погледај <span className='underline font-bold'>Црквени календар</span></span>
+            <span className='text-yellowColor text-base md:text-xs mt-1 md:mt-3'>Погледај <span className='underline font-bold'>Црквени календар</span></span>
          </article>
       </section>
 

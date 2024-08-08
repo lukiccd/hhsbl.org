@@ -1,8 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import bellRing from '../../public/bell-ring.svg';
-import birdLeft from '../../public/birdLeft.svg';
-import birdRight from '../../public/birdRight.svg';
+
 
 const RasporedBogosluzenjaData = [
   { name: 'Јутрење', time: '07:30' },
@@ -26,11 +25,11 @@ const RasporedBogosluzenja = () => {
           <h2 className="text-xl xl:text-2xl font-bold">Распоред богослужења</h2>
         </div>
 
-        <div className="flex flex-col xl:flex-row justify-between gap-5 xl:gap-0">
+        <div className="flex flex-col xl:flex-row justify-between gap-5 md:gap-10 ">
           {RasporedBogosluzenjaData.map((item, index) => (
-            <div key={index} className="text-start">
+            <div key={index} className="text-start ">
               <h3 className="text-base font-normal uppercase">{item.name}</h3>
-              <span className="text-3xl font-bold">{item.time}</span>
+              <span className="text-2xl font-bold">{item.time}</span>
               {item.note && <p className="text-base italic">{item.note}</p>}
             </div>
           ))}

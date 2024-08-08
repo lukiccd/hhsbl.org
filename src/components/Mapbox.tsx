@@ -1,5 +1,8 @@
 import mapboxgl from '!mapbox-gl'; // eslint-disable-line import/no-webpack-loader-syntax
 import { useEffect, useRef, useState } from 'react';
+import Image from 'next/image';
+import LocationIcon from "../../public/location.svg"
+import Link from 'next/link';
 
 mapboxgl.accessToken = 'pk.eyJ1IjoiZHNhdWhkdSIsImEiOiJjbHRyM2s4czEwYmZkMnFvYnVtYTJ0Z2MxIn0.axoJATiW8ki_AamYPmktHg';
 
@@ -19,7 +22,7 @@ const Mapbox = () => {
             zoom: zoom,
             pitch: 69,
             attributionControl: false,
-            logoPosition: 'bottom-right'
+            logoPosition: 'bottom-right',
         }).addControl(new mapboxgl.AttributionControl({
             compact: true,
             // customAttribution: ''
@@ -31,8 +34,15 @@ const Mapbox = () => {
             .addTo(map.current)
     });
     return (
-        <div>
-            <center><div ref={mapContainer} className="map-container h-[427px] w-[758px]" /></center>
+        <div className='relative'>
+            <center><div ref={mapContainer} className="map-container h-[60vh] mt-10 w-[80vw] xl:h-[627px] xl:w-[1200px] rounded-[30px] my-10" /></center>
+            <div className='md:absolute bottom-10 pb-10 pt-24 ps-14 rounded-[30px] md:flex flex-col justify-end  bg-mapLinearBg w-full hidden '>
+                <h3 className='text-white text-2xl font-normal'>Локација храма</h3>
+                <div className='md:flex md:flex-row md:justify-start md:items-center gap-5 '>
+                    <p className='text-white text-3xl font-bold'>Трг српских владра 3, Бања Лука 78 000</p>
+                    <Link href={''}> <Image src={LocationIcon} width={50} height={50} alt={''}></Image></Link>
+                </div>
+            </div>
         </div>
     );
 }

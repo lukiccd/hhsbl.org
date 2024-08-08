@@ -17,6 +17,7 @@ const config: Config = {
         "birdRight": "url('../../public/birdRight.svg')",
         "hero-backround-blog": "url('../../public/blog-post.webp')",
         "proskomidijaBackground": "url('../../public/proskomidijaBackround.webp')",
+        "mapLinearBg": "linear-gradient(180deg, rgba(0,0,0,0) 0%, #000 60%,  #000 100%)"
       },
       colors: {
         yellowColor: '#FFCE50',

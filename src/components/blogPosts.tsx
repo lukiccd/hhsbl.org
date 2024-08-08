@@ -36,9 +36,9 @@ const BlogPosts = () => {
                 <div className='gradient-border'>
                     <Image src={item.imageUrl} alt={item.title} />
                 </div>
-                <div>
-                    <span className='text-xs font-bold'>{item.date}</span>
-                    <h3 className='text-yellowColor text-2xl font-bold uppercase'>{item.title}</h3>
+                <div className='mt-2 md:mt-0'>
+                    <span className='text-lg md:text-xs font-bold'>{item.date}</span>
+                    <h3 className='text-yellowColor text-xl md:text-2xl font-bold uppercase'>{item.title}</h3>
                     <p className='text-base font-normal'>{item.description}</p>
                 </div>
             </article>

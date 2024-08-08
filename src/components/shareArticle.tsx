@@ -4,11 +4,12 @@ import React from 'react';
 interface IconsProperty {
    iconsColor?: string;
    textColor?: string;
+   divProperty?: string;
 }
 
-const ShareArticle = ({ iconsColor, textColor }: IconsProperty) => {
+const ShareArticle = ({ iconsColor, textColor, divProperty }: IconsProperty) => {
   return (
-    <div className={`text-${textColor} flex gap-2 xl:text-sm`}>
+    <div className={`text-${textColor} text-black/50 ${divProperty} flex gap-2 xl:text-sm`}>
       Подјели вијест на 
       <span className='flex gap-2 justify-center items-center'>
         <Facebook color={iconsColor} />
