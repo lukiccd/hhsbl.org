@@ -39,7 +39,7 @@ const SvestenstvoSekcija = () => {
 
   return (
     <section className='h-full w-full flex flex-col justify-start items-center py-[135px] bg-svestenstvo-bg bg-contain bg-no-repeat'>
-    <Heading spanText={'УПОЗНАЈТЕ'} mainText={'СВЕШТЕНСТВО ХРАМА'} spanStyle='text-black' mainTextStyle='xl:gradient-title-reverse gradient-title text-center xl:text-4xl text-3xl px-5 xl:px-0' />
+    <Heading spanText={'УПОЗНАЈТЕ'} mainText={'СВЕШТЕНСТВО ХРАМА'} spanStyle='text-black' mainTextStyle=' gradient-title text-center xl:text-4xl text-3xl px-5 xl:px-0' />
 
     {people.length > 0 && (
         <article className='mb-10'>

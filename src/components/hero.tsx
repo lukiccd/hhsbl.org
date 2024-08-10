@@ -14,7 +14,7 @@ const Hero = () => {
          <NavBar />
 
          <article className='xl:ps-20 mt-24 md:mt-56 relative z-10'>
-            <h1 className="text-white text-5xl md:text-6xl lg:text-7xl xl:text-6xl font-bold mb-2 md:mb-4 gradient-text">
+            <h1 className="text-white text-5xl md:text-6xl lg:text-7xl xl:text-6xl font-bold mb-2 md:mb-4 gradient-title ">
                <span className="">Храм Христа</span> <br></br>Спаситеља
             </h1>
             <h2 className="text-white font-semibold text-4xl md:text-4xl lg:text-5xl xl:text-6xl  mb-5 md:mb-11 drop-shadow-4xl">
