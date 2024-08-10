@@ -1,7 +1,6 @@
-import React from 'react'
-import Image from 'next/image'
-import Logo from '../../public/hram-hrista-spasitelja-logo.svg';
+import Image from 'next/image';
 import Link from 'next/link';
+import Logo from '../../public/hram-hrista-spasitelja-logo.svg';
 
 interface NavProperties {
    navStyle?: string,
@@ -9,7 +8,7 @@ interface NavProperties {
 }
 const NavBar = ({ navStyle, innerArticle }: NavProperties) => {
    return (
-      <nav className={` ${navStyle} flex flex-row xl:flex-row justify-between items-center xl:w-full xl:ps-20 xl:pe-10 xl:h-24`}>
+      <nav className={` ${navStyle} flex flex-row xl:flex-row justify-between items-center xl:w-full xl:ps-20 xl:pe-10 xl:h-24 `}>
          <article className={`${innerArticle} flex flex-row justify-center items-center  xl:py-0 xl:px-0 gap-5 `}>
             <Link href={'/'} className='flex flex-row gap-2'>
                <Image src={Logo} alt={'hram-hrista-spasitelja-logo'} width={50} height={50} />

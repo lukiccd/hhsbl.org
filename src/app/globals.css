@@ -54,7 +54,7 @@ body {
   position: relative;
   display: inline-block;
   border-radius: 25px; /* Adjust as needed */
-  padding: 2px; /* Space for the border */
+  padding: 2px;
   background: linear-gradient(90deg, #F9E0A1 0%, #FBC435 50%, #C68E00 100%);
 }
 

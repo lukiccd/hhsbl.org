@@ -1,8 +1,8 @@
 import mapboxgl from '!mapbox-gl'; // eslint-disable-line import/no-webpack-loader-syntax
-import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
-import LocationIcon from "../../public/location.svg"
 import Link from 'next/link';
+import { useEffect, useRef, useState } from 'react';
+import LocationIcon from "../../public/location.svg";
 
 mapboxgl.accessToken = 'pk.eyJ1IjoiZHNhdWhkdSIsImEiOiJjbHRyM2s4czEwYmZkMnFvYnVtYTJ0Z2MxIn0.axoJATiW8ki_AamYPmktHg';
 
@@ -22,9 +22,10 @@ const Mapbox = () => {
             zoom: zoom,
             pitch: 69,
             attributionControl: false,
-            logoPosition: 'bottom-right',
+            logoPosition: 'top-right',
         }).addControl(new mapboxgl.AttributionControl({
             compact: true,
+            position: 'top-right'
             // customAttribution: ''
         }));
         new mapboxgl.Marker({
