@@ -1,4 +1,3 @@
-import React from 'react';
 import Image from 'next/image';
 import bellRing from '../../public/bell-ring.svg';
 
@@ -14,7 +13,7 @@ const RasporedBogosluzenjaData = [
 
 const RasporedBogosluzenja = () => {
   return (
-    <section className='relative w-full xl:py-10 px-5'>
+    <section className='relative w-full xl:py-10 px-5' id='raspored-bogosluzenja'>
 
       <span className='absolute left-0 w-[100%] h-full bg-no-repeat bg-birdLeft hidden xl:block'></span>
       <span className='absolute right-0 w-[140px] h-[100%] bg-no-repeat bg-birdRight hidden xl:block'></span>

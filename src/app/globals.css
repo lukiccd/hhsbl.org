@@ -59,8 +59,8 @@ body {
 }
 
 .gradient-border img {
-  display: block;
-  border-radius: 15px; /* Match the outer radius */
+  /* display: block; */
+  border-radius: 25px; /* Match the outer radius */
 }
 
 .hero-pattern-mobile {

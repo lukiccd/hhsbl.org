@@ -15,11 +15,21 @@ const NavBar = ({ navStyle, innerArticle }: NavProperties) => {
                <span className='text-base font-bold xl:m-16 md:ms-3 xl:ms-0 '>Храм Христа Спаситеља<br /><span className='font-normal'>Бања Лука</span></span>
             </Link>
             <ul className='hidden xl:flex xl:flex-row gap-5 font-normal '>
-               <li className='text-base hover:underline transition-all ease-in-out'>Свештенство</li>
-               <li className='text-base hover:underline transition-all ease-in-out'>Историјат</li>
-               <li className='text-base hover:underline transition-all ease-in-out'>Новости</li>
-               <li className='text-base hover:underline transition-all ease-in-out'>Распоред богослужења</li>
-               <li className='text-base hover:underline transition-all ease-in-out'>Контакт</li>
+               <Link href={'/#svestenstvo'}>
+                  <li className='text-base hover:underline transition-all ease-in-out'>Свештенство</li>
+               </Link>
+               <Link href={'/istorijat'}>
+                  <li className='text-base hover:underline transition-all ease-in-out'>Историјат</li>
+               </Link>
+               <Link href={'/blog'}>
+                  <li className='text-base hover:underline transition-all ease-in-out'>Новости</li>
+               </Link>
+               <Link href={'/#raspored-bogosluzenja'}>
+                  <li className='text-base hover:underline transition-all ease-in-out'>Распоред богослужења</li>
+               </Link>
+               <Link href={'/kontakt'}>
+                  <li className='text-base hover:underline transition-all ease-in-out'>Контакт</li>
+               </Link>
             </ul>
          </article>
          <article className='xl:flex flex-col text-right hidden '>

@@ -12,7 +12,7 @@ const BlogPost = async ({
 }) => {
     const getPost = async () => {
         const post = await fetch(
-            `${process.env.NEXT_PUBLIC_STRAPI_URL}/blogs?populate=*&filters%5Bslug%5D%5B%24eq%5D=${slug}`
+            `${process.env.NEXT_PUBLIC_STRAPI_URL}/blogs?populate=*&filters%5Bslug%5D%5B%24eq%5D=${slug}`, { cache: 'no-cache' }
         ).then((res) => res.json());
         console.log(post.data);
         return post.data[0];
@@ -24,6 +24,7 @@ const BlogPost = async ({
             <HeroSecondary
                 title={post?.attributes.title}
                 shareable={true}
+                category="Новости"
                 date={String(
                     new Intl.DateTimeFormat("sr-RS", {
                         day: "2-digit",
@@ -32,9 +33,9 @@ const BlogPost = async ({
                     }).format(new Date(post?.attributes.publishedAt))
                 )}
                 author={post?.attributes.author}
-                coverUrl={`${process.env.NEXT_PUBLIC_STRAPI_STATIC_URL}${post?.attributes.cover.data.attributes.formats.large.url}`}
+                coverUrl={`${process.env.NEXT_PUBLIC_STRAPI_STATIC_URL}${post?.attributes.cover.data.attributes.formats?.large?.url || post?.attributes.cover.data.attributes.formats.small.url}`}
             />
-            <BlogContent article={post.attributes.body} />
+            <BlogContent article={post.attributes.body} publishedAt={post.attributes.publishedAt} editedAt={post.attributes.updatedAt} author={post.attributes.author} />
         </>
     );
 };
