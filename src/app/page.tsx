@@ -1,4 +1,5 @@
 "use client";
+import Calendar from "@/components/Calendar";
 import MapSection from "@/components/MapSection";
 import BlogPosts from "@/components/blogPosts";
 import Hero from "@/components/hero";
@@ -22,6 +23,7 @@ export default function Home() {
       <SvestenstvoSekcija />
       <ProskomidijaSection />
       <MapSection />
+      <Calendar />
       <footer className="text-[#836042] p-20">
         <center>
           <div className="">
