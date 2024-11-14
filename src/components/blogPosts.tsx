@@ -10,7 +10,7 @@ export default function BlogPosts() {
     const getPosts = () => {
         return new Promise((resolve, rej) => {
             const post = fetch(
-                `${process.env.NEXT_PUBLIC_STRAPI_URL}/blogs?populate=*&pagination\[limit\]=3&sort\[0\]=createdAt:desc`,
+                `${process.env.NEXT_PUBLIC_STRAPI_URL}/novosti?populate=*&pagination\[limit\]=3&sort\[0\]=createdAt:desc&locale=en`,
                 {
                     cache: "no-cache",
                 }
@@ -41,8 +41,8 @@ export default function BlogPosts() {
                         <article key={index} className="flex flex-col max-w-[500px]">
                             <div className="gradient-border max-h-[430px]">
                                 <Image
-                                    src={`${process.env.NEXT_PUBLIC_STRAPI_STATIC_URL}${item?.attributes.cover.data.attributes.formats?.large?.url || item?.attributes.cover.data.attributes.formats.small.url}`}
-                                    alt={item.attributes.title}
+                                    src={`${process.env.NEXT_PUBLIC_STRAPI_STATIC_URL}${item?.cover.formats?.large?.url || item?.cover.formats.small.url}`}
+                                    alt={item.title}
                                     // width={541}
                                     // height={430}
                                     // sizes="20vw"
@@ -55,15 +55,15 @@ export default function BlogPosts() {
                             </div>
                             <div className="mt-2 md:mt-0">
                                 <span className="text-lg md:text-xs font-bold">
-                                    {new Intl.DateTimeFormat('sr-RS', { day: '2-digit', month: 'long', year: 'numeric' }).format(new Date(item.attributes.publishedAt))}
+                                    {new Intl.DateTimeFormat('sr-RS', { day: '2-digit', month: 'long', year: 'numeric' }).format(new Date(item.publishedAt))}
                                 </span>
-                                <Link href={`/blog/${item.attributes.slug}`}>
+                                <Link href={`/blog/${item.slug}`}>
                                     <h3 className="text-yellowColor text-xl md:text-2xl font-bold uppercase">
-                                        {item.attributes.title}
+                                        {item.title}
                                     </h3>
                                 </Link>
                                 <p className="text-base font-normal">
-                                    {item.attributes.description}
+                                    {item.description}
                                 </p>
                             </div>
                         </article>
